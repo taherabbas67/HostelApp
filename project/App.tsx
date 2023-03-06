@@ -10,38 +10,44 @@ import {
 } from 'react-native'
 
 
-function AppPro(): JSX.Element {
+function App(): JSX.Element {
   // const isDarkMode = useColorScheme() === 'dark'
 
 
-    const [text, onChangeText] = React.useState('UserName');
-    const [number, onChangeNumber] = React.useState('password');
+  const [username, onChangeText] = React.useState('');
+  const [password, onChangePassword] = React.useState('');
 
   return (
 
-      <View style={styles.container}>
-        <Text style={styles.hostelText}>Hostel<Text style={styles.appText}>App</Text></Text>
+    <View style={styles.container}>
+      <Text style={styles.hostelText}>Hostel<Text style={styles.appText}>App</Text></Text>
 
 
-        <TextInput
+      {/* <View style={{marginTop: 20}}> */}
+      <TextInput
         style={styles.input}
         onChangeText={onChangeText}
-        value={text}
+        value={username}
+        placeholder="Username"
       />
       <TextInput
         style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="useless placeholder"
-        keyboardType="numeric"
+        onChangeText={onChangePassword}
+        secureTextEntry={true}
+        value={password}
+        placeholder="Password"
+        // keyboardType="numeric"
       />
+      {/* </View> */}
+
 
       <Button
-        title="Submit"
-        onPress={() => Alert.alert('Simple Button pressed')}
+        title="Log In"
+        // onPress={() => dashboard}  
+        color='#2958E5'
       />
 
-      </View>
+    </View>
   )
 }
 
@@ -57,14 +63,17 @@ const styles = StyleSheet.create({
   darkText: {
     color: '#000000'
   },
+
   hostelText: {
     fontSize: 50,
-    color: 'blue',
-    fontWeight: 'bold'
+    color: '#2958E5',
+    fontWeight: 'bold',
+    marginBottom: 30
   },
   appText: {
     fontSize: 50,
-    color: 'black'
+    color: '#060606',
+    marginBottom: 30
   },
 
   input: {
@@ -72,9 +81,14 @@ const styles = StyleSheet.create({
     width: '80%',
     margin: 12,
     borderWidth: 1,
+    borderRadius: 5,
     padding: 10,
   },
+
+  button: {
+    color: '#2958E5'
+  }
 })
 
 
-export default AppPro;
+export default App;
