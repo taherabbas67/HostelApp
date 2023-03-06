@@ -23,7 +23,6 @@ function App(): JSX.Element {
       <Text style={styles.hostelText}>Hostel<Text style={styles.appText}>App</Text></Text>
 
 
-      {/* <View style={{marginTop: 20}}> */}
       <TextInput
         style={styles.input}
         onChangeText={onChangeText}
@@ -38,7 +37,7 @@ function App(): JSX.Element {
         placeholder="Password"
         // keyboardType="numeric"
       />
-      {/* </View> */}
+
 
 
       <Button
