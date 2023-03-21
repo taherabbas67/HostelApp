@@ -1,5 +1,5 @@
 import React from 'react'
-import logout from '../src/logout.png';
+// import logout from './src/logout.png';
 
 
 import {
@@ -14,17 +14,17 @@ import {
 
 function Dashboard(): JSX.Element {
 
-    const logout_img = Image.resolveAssetSource(logout).uri
+    // const logout_img = Image.resolveAssetSource(logout).uri
 
     return (
         <>
             <View style={styles.container}>
                 <Text style={styles.hostelText}>Hostel<Text style={styles.appText}>App</Text></Text>
 
-                <Image
+                {/* <Image
                     style={styles.img}
                     source={logout}
-                />
+                /> */}
 
             </View>
 
